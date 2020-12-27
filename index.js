@@ -47,7 +47,8 @@ app.post("/auth", (req, res) => {
     if(!(user === null))
     {
       if(user.password === pass){
-        res.send("success");
+        // res.render("index.html");
+        res.redirect("index.html")
       }
       else {
         res.send("Wrong password");
